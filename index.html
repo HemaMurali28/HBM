@@ -1,88 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Results Calculator</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 2rem;
-            background: #f4f4f4;
-            color: #333;
-        }
-        header {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        .calculator {
-            background: #fff;
-            padding: 2rem;
-            border-radius: 8px;
-            max-width: 500px;
-            margin: auto;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        input[type="number"], button {
-            width: 100%;
-            padding: 10px;
-            margin: 8px 0;
-        }
-        .result {
-            font-weight: bold;
-            font-size: 1.2rem;
-            margin-top: 1rem;
-            color: green;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sunset Paradise Hotel</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f2f2f2;
+    }
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    nav {
+      background-color: #34495e;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      background-image: url('https://source.unsplash.com/1600x600/?hotel,resort');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .section {
+      padding: 40px 20px;
+      text-align: center;
+      background-color: white;
+      margin: 20px;
+      border-radius: 8px;
+    }
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+    }
+  </style>
 </head>
 <body>
 
 <header>
-    <h1>Results Calculator</h1>
-    <p>Group Project - GitHub Pages</p>
+  <h1>Sunset Paradise Hotel</h1>
+  <p>Your luxury escape awaits</p>
 </header>
 
-<section class="calculator">
-    <label>Enter Marks for Subject 1:</label>
-    <input type="number" id="sub1" min="0" max="100">
+<nav>
+  <a href="#">Home</a>
+  <a href="#">Rooms</a>
+  <a href="#">Facilities</a>
+  <a href="#">Gallery</a>
+  <a href="#">Contact</a>
+</nav>
 
-    <label>Enter Marks for Subject 2:</label>
-    <input type="number" id="sub2" min="0" max="100">
+<div class="hero">
+  <h2>Welcome to Sunset Paradise</h2>
+  <p>Relax. Refresh. Rejuvenate.</p>
+</div>
 
-    <label>Enter Marks for Subject 3:</label>
-    <input type="number" id="sub3" min="0" max="100">
+<div class="section">
+  <h2>Our Rooms</h2>
+  <p>Choose from a variety of luxury rooms and suites with sea view balconies, king-size beds, and modern amenities.</p>
+</div>
 
-    <button onclick="calculateResult()">Calculate Result</button>
+<div class="section">
+  <h2>Facilities</h2>
+  <p>Enjoy our spa, infinity pool, rooftop restaurant, 24/7 service, and complimentary breakfast.</p>
+</div>
 
-    <div class="result" id="output"></div>
-</section>
+<div class="section">
+  <h2>Meet the Team</h2>
+  <p>This project is created by a group of passionate developers.</p>
+  <ul style="list-style: none; padding: 0;">
+    <li> Hema</li>
+    <li> Sanjana 2</li>
+    <li> Bhavigna 3</li>
+    <li> Pavani 4</li>
+    <li> Disha 5</li>
+  </ul>
+</div>
 
-<script>
-    function calculateResult() {
-        const s1 = parseFloat(document.getElementById("sub1").value);
-        const s2 = parseFloat(document.getElementById("sub2").value);
-        const s3 = parseFloat(document.getElementById("sub3").value);
-
-        if (isNaN(s1) || isNaN(s2) || isNaN(s3)) {
-            document.getElementById("output").innerText = "Please enter all marks.";
-            return;
-        }
-
-        const total = s1 + s2 + s3;
-        const average = total / 3;
-
-        let grade;
-        if (average >= 90) grade = "A+";
-        else if (average >= 75) grade = "A";
-        else if (average >= 60) grade = "B";
-        else if (average >= 50) grade = "C";
-        else grade = "Fail";
-
-        document.getElementById("output").innerText = 
-            Total: ${total}, Average: ${average.toFixed(2)}, Grade: ${grade};
-    }
-</script>
+<footer>
+  &copy; 2025 Sunset Paradise Hotel | Designed by Team Hema
+</footer>
 
 </body>
 </html>
